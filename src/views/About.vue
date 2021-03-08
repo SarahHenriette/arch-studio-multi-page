@@ -1,5 +1,13 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p>This is an about page</p>
   </div>
 </template>
+
+<style lang="scss" scoped>
+  .about {
+    width: 100%;
+    height: 800px;
+    background-color: blue;
+  }
+</style>
