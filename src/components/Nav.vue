@@ -8,9 +8,11 @@
         <li><router-link to="/contact">Contact</router-link></li>
       </ul>
       <div id="nav-mobile" >
-        <router-link to="/"><Logo/></router-link> 
-          <svg xmlns="http://www.w3.org/2000/svg"  class="menu-close" v-if="menuMobile" @click="changeMenuMobile" width="20" height="21"><path fill="#1B1D23" fill-rule="evenodd" d="M17.425.954l2.12 2.121-7.424 7.425 7.425 7.425-2.121 2.12L10 12.622l-7.425 7.425-2.12-2.121L7.878 10.5.454 3.075 2.575.955 10 8.378 17.425.954z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg"  class="menu-burger" v-else @click="changeMenuMobile" width="24" height="17"><g fill="#1B1D23" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
+        <router-link to="/"><Logo color="#1B1D23"/></router-link> 
+          <svg xmlns="http://www.w3.org/2000/svg"  class="menu-close" v-if="menuMobile" @click="changeMenuMobile" width="20" height="21">
+          <path fill="#1B1D23" fill-rule="evenodd" d="M17.425.954l2.12 2.121-7.424 7.425 7.425 7.425-2.121 2.12L10 12.622l-7.425 7.425-2.12-2.121L7.878 10.5.454 3.075 2.575.955 10 8.378 17.425.954z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg"  class="menu-burger" v-else @click="changeMenuMobile" width="24" height="17"><g fill="#1B1D23" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
         <transition name="slide" mode="out-in">
           <div v-if="menuMobile" class="nav-mobile-menu">
             <ul>
@@ -40,13 +42,16 @@ export default {
     }
   },
   mounted() {
-    // gsap.to('.menu-burger', {x:500, duration: 3})
+   
   },
   methods: {
     changeMenuMobile() {
       this.menuMobile = !this.menuMobile
-      gsap.to('.menu-close', {x:-50, duration: 3})
-      gsap.to('.menu-burger', {x:-50, duration: 3})
+       if(this.menuMobile == true) {
+        gsap.to('.menu-burger', {rotation: 180, duration: 1})
+      }else {
+        gsap.to('.menu-close', {rotation: -180, duration: 1})
+      }
 
     }
   },
@@ -68,7 +73,6 @@ $veryDarkBlue: #1B1D23;
     a {
       text-decoration: none;
       padding: 15px;
-      font-weight: bold;
     }
   }
   #nav {
@@ -93,6 +97,7 @@ $veryDarkBlue: #1B1D23;
       background-color: $veryLightGrey;
       right: 0;
       top: 96px;
+      overflow: hidden;
       ul {
         width: 247px;
         height: 139px;
@@ -101,19 +106,11 @@ $veryDarkBlue: #1B1D23;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        animation: test .5s .6s;
         opacity: 1;
         li a {
           color: $veryDarkBlue;
-          animation: test .5s .6s;
-          opacity: 1;
         }
-
-        @keyframes test {
-          0%{opacity: 0;}
-          100%{opacity: 1;}
-        }
-        
+     
       }
     }
     .slide-enter-active, .slide-leave-active {
@@ -121,9 +118,11 @@ $veryDarkBlue: #1B1D23;
     }
 
     .slide-enter, .slide-leave-active {
-      height: 10px;
+      height: 0px;
+      
     }
-  }
+
+    }
 
   @media screen and (max-width: 1200px){
     #nav {

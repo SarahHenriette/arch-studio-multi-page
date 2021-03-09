@@ -4,15 +4,18 @@
     <transition name="fade" mode="out-in">
         <router-view/>
     </transition>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
   export default {
     components: {
-      Nav
+      Nav,
+      Footer
     },
     data() {
       return {
@@ -82,11 +85,20 @@ body {
       color: $darkGrey;
   }
 
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
   a {
       font-size: 15px;
       line-height: 25px;
       color: $mediumGrey;
       transition: .5s color ease;
+      text-decoration: none;
+      font-weight: bold;
       &:hover {
         color: $veryDarkBlue;
       }
@@ -99,6 +111,50 @@ body {
 
 .fade-enter, .fade-leave-active {
   opacity: 0
+}
+
+
+//buttons 
+
+.btn-1 {
+    height: 72px;
+    background-color: $veryDarkBlue;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: $darkGrey;
+    }
+    &:active {
+        background-color: $lightGrey;
+    }
+}
+
+.btn-2 {
+    width: 80px;
+    height: 80px;
+    background-color: $veryDarkBlue;
+    color: $white;
+    &:hover {
+        background-color: $darkGrey;
+    }
+    &:active {
+        background-color: $lightGrey;
+    }
+}
+
+.btn-3 {
+    width: 80px;
+    height: 80px;
+    background-color: $white;
+    color: $white;
+    &:hover {
+        background-color: $veryLightGrey;
+    }
+    &:active {
+        background-color: $veryDarkBlue;
+    }
 }
   
 }
