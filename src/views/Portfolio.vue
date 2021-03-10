@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
     .portfolio {
         width: 100%;
-        height: 800px;
+        height: 1200px;
         background-color: pink;
     }
 </style>

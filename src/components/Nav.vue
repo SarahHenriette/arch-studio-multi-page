@@ -42,6 +42,7 @@ export default {
     }
   },
   mounted() {
+        // gsap.fromTo('#nav', {height: 0}, {height: 40, duration: .5})
    
   },
   methods: {
@@ -98,6 +99,7 @@ $veryDarkBlue: #1B1D23;
       right: 0;
       top: 96px;
       overflow: hidden;
+      z-index: 11;
       ul {
         width: 247px;
         height: 139px;
@@ -130,7 +132,7 @@ $veryDarkBlue: #1B1D23;
       margin: 56px 180px 56px 97px;
     }
   }
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 750px){
     #nav {
       display: none;
     }

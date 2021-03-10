@@ -11,6 +11,7 @@
 <script>
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+// import { gsap } from "gsap";
 
   export default {
     components: {
@@ -20,6 +21,10 @@ import Footer from './components/Footer'
     data() {
       return {
       };
+    },
+     mounted() {
+        // gsap.to('.menu-burger', {rotation: 180, duration: 1})
+   
     },
     methods: {
    
@@ -67,6 +72,10 @@ body {
   h1 {
       font-size: 80px;
       line-height: 80px;
+      @media screen and (max-width: 750px) {
+        font-size: 48px;
+        line-height: 48px;
+      }
   }
 
   h2 {
@@ -148,13 +157,23 @@ body {
     width: 80px;
     height: 80px;
     background-color: $white;
-    color: $white;
+    color: $veryDarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $spartan;
+    font-size: 15px;
+
     &:hover {
         background-color: $veryLightGrey;
     }
     &:active {
         background-color: $veryDarkBlue;
     }
+}
+.btn-3.active {
+    background-color: $veryDarkBlue;
+    color: $white;
 }
   
 }
