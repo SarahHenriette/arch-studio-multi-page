@@ -67,6 +67,9 @@ body {
       font-size: 200px;
       line-height: 200px;
       color: $veryLightGrey;
+      @media screen and (max-width: 1110px) {
+        font-size: 120px;
+      }
   }
 
   h1 {
@@ -81,6 +84,10 @@ body {
   h2 {
       font-size: 56px;
       line-height: 56px;
+      @media screen and (max-width: 750px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
   }
 
   h3 {
@@ -113,14 +120,14 @@ body {
       }
   }
 
-//transition router
-.fade-enter-active, .fade-leave-active {
-  transition: 0.3s opacity ease;
-}
+  //transition router
+  .fade-enter-active, .fade-leave-active {
+    transition: 0.3s opacity ease;
+  }
 
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
 
 
 //buttons 

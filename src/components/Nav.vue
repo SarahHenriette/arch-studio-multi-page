@@ -16,9 +16,9 @@
         <transition name="slide" mode="out-in">
           <div v-if="menuMobile" class="nav-mobile-menu">
             <ul>
-              <li><router-link to="/portfolio">Portfolio</router-link></li>
-              <li><router-link to="/about">About Us</router-link></li>
-              <li><router-link to="/contact">Contact</router-link></li>
+              <li @click="changeMenuMobile" ><router-link to="/portfolio" >Portfolio</router-link></li>
+              <li @click="changeMenuMobile" ><router-link to="/about" >About Us</router-link></li>
+              <li @click="changeMenuMobile" ><router-link to="/contact" >Contact</router-link></li>
             </ul>
           </div>
         </transition>
@@ -97,7 +97,7 @@ $veryDarkBlue: #1B1D23;
       position: absolute;
       background-color: $veryLightGrey;
       right: 0;
-      top: 96px;
+      top: 95px;
       overflow: hidden;
       z-index: 11;
       ul {
@@ -132,7 +132,7 @@ $veryDarkBlue: #1B1D23;
       margin: 56px 180px 56px 97px;
     }
   }
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 600px){
     #nav {
       display: none;
     }

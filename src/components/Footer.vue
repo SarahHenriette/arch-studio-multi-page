@@ -33,6 +33,7 @@ footer {
     display: flex;
     position: relative;
     margin: auto;
+    margin-top: 160px;
     .contain-logo-footer {
         width: 200px;
         height: 100%;
