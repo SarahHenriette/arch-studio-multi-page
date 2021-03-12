@@ -139,8 +139,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s color ease, .5s background-color ease;
     &:hover {
         background-color: $darkGrey;
+        color: $white;
     }
     &:active {
         background-color: $lightGrey;
@@ -171,12 +173,12 @@ body {
     font-family: $spartan;
     font-size: 15px;
 
-    &:hover {
-        background-color: $veryLightGrey;
-    }
-    &:active {
-        background-color: $veryDarkBlue;
-    }
+    // &:hover {
+    //     background-color: $veryLightGrey;
+    // }
+    // &:active {
+    //     background-color: $veryDarkBlue;
+    // }
 }
 .btn-3.active {
     background-color: $veryDarkBlue;
