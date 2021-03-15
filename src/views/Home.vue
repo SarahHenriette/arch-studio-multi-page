@@ -18,18 +18,33 @@
         <router-link to="/about" class="btn-1">About Us<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
       </article>
     </section>
+    <section id="featured">
+      <header>
+        <h2>Featured</h2>
+        <router-link to="/portfolio" class="btn-1">See All<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
+      </header> 
+      <body class="contain-featured">
+        <Featured number="1" title="Project Del Sol" class="featured-project-del-sol"/>
+        <Featured number="2" title="228B Tower" class="featured-tower"/>
+        <Featured number="3" title="Le Prototype" class="featured-prototype"/>
+      </body>     
+        <router-link to="/portfolio" class="btn-1 btn-mobile">See All<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
+    </section>
   </div>
 </template>
 
 <script>
 import Header from './../components/Home/Header'
+import Featured from './../components/Home/Featured'
+
 // import { TweenMax } from 'gsap'
 // import 'ScrollToPlugin'
 
 export default {
   name: 'Home',
   components: {
-    Header
+    Header,
+    Featured
   },
   mounted () {
     const scene2 = this.$scrollmagic.scene({
@@ -198,6 +213,101 @@ $black: #000;
           left: 32px;
           h2 {
             width: 311px;
+          }
+        }
+      }
+    }
+
+    #featured {
+      width: 1110px;
+      height: 696px;
+      margin: auto;
+      margin-top: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      header {
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn-1 {
+          width: 169px;
+        }
+        a svg {
+          margin-left: 24px;
+        }
+      }
+      .contain-featured {
+        width: 1110px;
+        height: 560px;
+        display: flex;
+        justify-content: space-between;
+        figure {
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .featured-project-del-sol {
+          background-image: url('./../../public/portfolio/desktop/image-del-sol.jpg');
+        }
+        .featured-tower {
+          background-image: url('./../../public/portfolio/desktop/image-228b.jpg');
+        }
+        .featured-prototype {
+          background-image: url('./../../public/portfolio/desktop/image-prototype.jpg');
+        }
+      }
+
+      .btn-mobile {
+        display: none;
+      }
+      @media screen and (max-width: 1110px) {
+        width: 573px;
+        height: 925px;
+        .contain-featured {
+          flex-direction: column;
+          width: 100%;
+          height: 768px;
+          .featured-project-del-sol {
+            background-image: url('./../../public/portfolio/tablet/image-del-sol.jpg');
+          }
+          .featured-tower {
+            background-image: url('./../../public/portfolio/tablet/image-228b.jpg');
+          }
+          .featured-prototype {
+            background-image: url('./../../public/portfolio/tablet/image-prototype.jpg');
+          }
+        }
+      }
+
+      @media screen and (max-width: 415px) {
+        width: 311px;
+        height: 925px;
+        header {
+          a {
+            display: none;
+          }
+        }
+        .contain-featured {
+          flex-direction: column;
+          width: 100%;
+          height: 768px;
+          .featured-project-del-sol {
+            background-image: url('./../../public/portfolio/tablet/image-del-sol.jpg');
+          }
+          .featured-tower {
+            background-image: url('./../../public/portfolio/tablet/image-228b.jpg');
+          }
+          .featured-prototype {
+            background-image: url('./../../public/portfolio/tablet/image-prototype.jpg');
+          }
+        }
+        .btn-mobile {
+          display: flex;
+          width: 311px;
+          margin-top: 20px;
+          svg {
+            margin-left: 24px;
           }
         }
       }

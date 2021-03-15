@@ -28,6 +28,8 @@
                 </div>
             </div>
         </section>
+
+        <div id="map"></div>
     </div>
 </template>
 
@@ -38,7 +40,21 @@ import Header from './../components/HeaderAboutContact'
 export default {
     components: {
         Header
-    }
+    },
+    mounted () {
+        const scene2 = this.$scrollmagic.scene({
+            triggerElement: '#map',
+            triggerHook: 0.8,
+            duration: 500
+            }).setTween('#map', {  
+            css: { 
+                transform: 'scale(1)',
+                transition: 'transform .2s linear' ,
+            },
+        })
+
+        this.$scrollmagic.addScene(scene2)
+     }
 }
 </script>
 
@@ -102,6 +118,15 @@ $veryDarkBlue: #1B1D23;
                 }
             }
         }
+
+        #map {
+            width: 1110px;
+            height: 560px;
+            margin: auto;
+            margin-top: 200px;
+            background-image: url('../../public/contact/desktop/image-map.png');
+            transform: scale(0.5);
+        }
     }
 
     @media screen and (max-width: 1110px) {
@@ -128,6 +153,10 @@ $veryDarkBlue: #1B1D23;
                         }
                     }
                 }
+            }
+            #map {
+                width: 572px;
+                background-image: url('../../public/contact/tablet/image-map.png');
             }
         }
     }
@@ -158,6 +187,13 @@ $veryDarkBlue: #1B1D23;
                         }  
                     }
                 }
+            }
+
+            #map {
+                width: 100%;
+                height: 367px;
+                margin-top: 72px;
+                background-image: url('../../public/contact/mobile/image-map.png');
             }
         }
     }

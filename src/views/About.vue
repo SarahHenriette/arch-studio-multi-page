@@ -14,15 +14,27 @@
       </div>
       <div class="contain-image-our-heritage"></div>
     </div>
+    <section id="leaders">
+      <h2>The<br/> Leaders</h2>
+      <div class="contain-profile-leaders">
+        <Leader name="Jake Richards" job="Chief Architect"><template v-slot:img><img src="./../../public/about/desktop/avatar-jake.jpg" alt="portrait de bel homme avec des lunettes de soleil"></template></Leader>
+        <Leader name="Thompson Smith" job="Head of Finance"><template v-slot:img><img src="./../../public/about/desktop/avatar-thompson.jpg" alt="portrait de bel homme noir"></template></Leader>
+        <Leader name="Jackson Rourke" job="Lead Designer"><template v-slot:img><img src="./../../public/about/desktop/avatar-jackson.jpg" alt="portrait de bel homme brun et ténébreux"></template></Leader>
+        <Leader name="Maria Simpson" job="Senior Architect"><template v-slot:img><img src="./../../public/about/desktop/avatar-maria.jpg" alt="portrait de belle femme brune et élégante"></template></Leader>
+      
+      </div>
+    </section>
 
   </div>
 </template>
 
 <script>
 import Header from './../components/HeaderAboutContact'
+import Leader from './../components/About/Leader'
 export default {
   components: {
-    Header
+    Header,
+    Leader
   }, 
 
   mounted () {
@@ -77,6 +89,25 @@ export default {
         transform: translateX(100px)
       }
     }
+
+    #leaders {
+      width: 1110px;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      margin-top: 200px;
+      
+      h2 {
+        margin: 0;
+      }
+      .contain-profile-leaders {
+        width: 730px;
+        height: 860px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
   }
 
   @media screen and (max-width: 1110px) {
@@ -92,6 +123,14 @@ export default {
           display: none;
         }
       }
+      #leaders {
+        flex-direction: column;
+        width: 572px;
+        .contain-profile-leaders { 
+          width: 572px;
+          align-items: flex-end;
+        }
+      }
     }
   }
 
@@ -100,6 +139,29 @@ export default {
       header {
         .contain-image-header {
           background-image: url('../../public/about/mobile/image-hero.jpg');
+        }
+      }
+
+      #our-heritage {
+        width: 311px;
+        height: 508px;
+        .contain-text-our-heritage {
+          width: 311px;
+          height: 425px;
+        }
+
+      }
+
+      #leaders {
+        flex-direction: column;
+        width: 311px;
+        height: 1896px;
+        margin-top: 72px;
+        .contain-profile-leaders { 
+          width: 311px;
+          height: 1736px;
+          flex-direction: column;
+          flex-wrap: nowrap;
         }
       }
     }
