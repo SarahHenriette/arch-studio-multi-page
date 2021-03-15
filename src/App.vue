@@ -52,7 +52,7 @@ body {
   $white: #FFF;
 
 
-  h1, .h1-bis, h2, h3, p, a {
+  h1, .h1-bis, h2, h3, p, a, input, textarea {
       font-family: $spartan;
   }
   h1, .h1-bis, h2, h3 {

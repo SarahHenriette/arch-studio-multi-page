@@ -30,6 +30,17 @@
         </section>
 
         <div id="map"></div>
+
+        <section id="connect-with-us">
+            <h2>Connect with us</h2>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <div class="btn-2"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></div>
+            </form>
+        </section>
+
     </div>
 </template>
 
@@ -127,6 +138,49 @@ $veryDarkBlue: #1B1D23;
             background-image: url('../../public/contact/desktop/image-map.png');
             transform: scale(0.5);
         }
+
+        #connect-with-us {
+            width: 1110px;
+            height: 348px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 200px;
+            h2 {
+                margin: 0;
+                width: 350px;
+            }
+            form {
+                width: 730px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+                input {
+                    height: 47px;
+                }
+                textarea {
+                    height: 94px;
+                }
+                input, textarea {
+                    width: 100%;
+                    &:focus {
+                        outline: none;
+                    }
+                    border: none;
+                    border-bottom: solid 1px $veryDarkBlue;
+                }
+                .btn-2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    bottom: -80px;
+                    right: 0;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 1110px) {
@@ -158,6 +212,21 @@ $veryDarkBlue: #1B1D23;
                 width: 572px;
                 background-image: url('../../public/contact/tablet/image-map.png');
             }
+
+            
+        #connect-with-us {
+            width: 573px;
+            height: 469px;
+            flex-direction: column;
+            h2 {
+                margin: 0;
+                width: 100%;
+            }
+            form {
+                width: 573px;
+                height: 349px;
+            }
+        }
         }
     }
     @media screen and (max-width: 750px) {
@@ -194,6 +263,20 @@ $veryDarkBlue: #1B1D23;
                 height: 367px;
                 margin-top: 72px;
                 background-image: url('../../public/contact/mobile/image-map.png');
+            }
+
+            #connect-with-us {
+                width: 311px;
+                height: 493px;
+                margin-top: 72px;
+                h2 {
+                    margin: 0;
+                    width: 170px;
+                }
+                form {
+                    width: 311px;
+                    height: 349px;
+                }
             }
         }
     }
