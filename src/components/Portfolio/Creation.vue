@@ -2,10 +2,10 @@
     <figure id="figure">
         <div class="opacity"></div>
         <div class="opacity2"></div>
-        <caption>
+        <div class="caption">
             <p class="title">{{ name }}</p>
             <p>{{ date }}</p>
-        </caption>
+        </div>
     </figure>
 </template>
 
@@ -59,7 +59,7 @@ $white: #FFF;
                 opacity: 0.5;
             }
         }
-        caption {
+        .caption {
             width: 203px;
             height: 54px;
             display: flex;
@@ -96,7 +96,7 @@ $white: #FFF;
             .h1-bis {
                 display: none;
             }
-            caption {
+            .caption {
                 bottom: 24px;
                 left: 24px;
             }

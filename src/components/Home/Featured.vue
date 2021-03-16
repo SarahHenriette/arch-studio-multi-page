@@ -2,10 +2,10 @@
     <figure class="figure">
         <div class="opacity"></div>
         <p class="h1-bis">{{  number }}</p>
-        <caption>
+        <div class="caption">
             <p class="title">{{ title }}</p>
             <p>View All projects</p>
-        </caption>
+        </div>
     </figure>
 </template>
 
@@ -16,18 +16,18 @@ export default {
         title: String
     },
      mounted () {
-    //     const scene2 = this.$scrollmagic.scene({
-    //         triggerElement: '#figure',
-    //         triggerHook: 0.7,
-    //         duration: 500
-    //         }).setTween('.h1-bis', {  
-    //         css: { 
-    //             transform: 'scale(1)',
-    //             transition: 'transform .2s linear' ,
-    //         },
-    //     })
+        const scene2 = this.$scrollmagic.scene({
+            triggerElement: '.figure',
+            triggerHook: 0.7,
+            duration: 500
+            }).setTween('.h1-bis', {  
+            css: { 
+                transform: 'scale(1)',
+                transition: 'transform .2s linear' ,
+            },
+        })
 
-    // this.$scrollmagic.addScene(scene2)
+    this.$scrollmagic.addScene(scene2)
      }
 }
 </script>
@@ -53,9 +53,9 @@ $white: #FFF;
             right: 0;
             top: 32px;
             margin: 0;
-            // transform: scale(0.2);
+            transform: scale(0.2);
         }
-        caption {
+        .caption {
             width: 142px;
             height: 54px;
             display: flex;
@@ -92,7 +92,7 @@ $white: #FFF;
             .h1-bis {
                 display: none;
             }
-            caption {
+            .caption {
                 bottom: 24px;
                 left: 24px;
             }

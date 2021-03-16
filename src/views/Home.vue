@@ -47,45 +47,45 @@ export default {
     Featured
   },
   mounted () {
-    // const scene2 = this.$scrollmagic.scene({
-    //   triggerElement: '#welcome',
-    //   triggerHook: 0.9,
-    //   duration: 500
-    // }).setTween('h1', {  
-    //   css: { 
-    //       transform: 'translateY("0px")',
-    //       transition: 'transform .2s linear',
-    //       color: '#EEEFF4'
-    //   },
-    // })
+    const scene2 = this.$scrollmagic.scene({
+      triggerElement: '#welcome',
+      triggerHook: 0.9,
+      duration: 500
+    }).setTween('h1', {  
+      css: { 
+          transform: 'translateY("0px")',
+          transition: 'transform .2s linear',
+          color: '#EEEFF4'
+      },
+    })
 
-    // this.$scrollmagic.addScene(scene2)
+    this.$scrollmagic.addScene(scene2)
 
-    // const scene3 = this.$scrollmagic.scene({
-    //   triggerElement: '#welcome',
-    //   triggerHook: 0.5,
-    //   duration: 300
-    // }).setTween('.contain-image-welcome', {  
-    //   css: { 
-    //       transform: 'translateX("0")',
-    //       transition: 'transform .2s linear',
-    //   },
-    // })
+    const scene3 = this.$scrollmagic.scene({
+      triggerElement: '#welcome',
+      triggerHook: 0.5,
+      duration: 300
+    }).setTween('.contain-image-welcome', {  
+      css: { 
+          transform: 'translateX("0")',
+          transition: 'transform .2s linear',
+      },
+    })
 
-    // this.$scrollmagic.addScene(scene3)
+    this.$scrollmagic.addScene(scene3)
 
-    // const scene4 = this.$scrollmagic.scene({
-    //   triggerElement: '#small-team',
-    //   triggerHook: 0.9,
-    //   duration: 300
-    // }).setTween('#small-team', {  
-    //   css: { 
-    //       transform: 'scale(1)',
-    //       transition: 'transform .2s linear'
-    //   },
-    // })
+    const scene4 = this.$scrollmagic.scene({
+      triggerElement: '#small-team',
+      triggerHook: 0.9,
+      duration: 300
+    }).setTween('#small-team', {  
+      css: { 
+          transform: 'scale(1)',
+          transition: 'transform .2s linear'
+      },
+    })
 
-    // this.$scrollmagic.addScene(scene4)
+    this.$scrollmagic.addScene(scene4)
   }
 
 }
@@ -110,8 +110,8 @@ $black: #000;
         top: 0;
         left: 0;
         z-index: 1;
-        // transform: translateY(-80px);
-        // color: #FFF;
+        transform: translateY(-80px);
+        color: #FFF;
 
       }
       .contain-text-welcome {
@@ -126,7 +126,7 @@ $black: #000;
         }
       }
       .contain-image-welcome {
-        // transform: translateX(-50px);
+        transform: translateX(-50px);
         margin: 0;
         width: 350px;
         height: 568px;
@@ -172,7 +172,7 @@ $black: #000;
       background-image: url('./../../public/home/desktop/image-small-team.jpg');
       margin: 200px auto 0 auto;
       position: relative;
-      //  transform: scale(0.8);
+       transform: scale(0.8);
       .hover-small-team {
         width: 100%;
         height: 100%;
