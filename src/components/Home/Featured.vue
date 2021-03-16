@@ -16,18 +16,18 @@ export default {
         title: String
     },
      mounted () {
-        const scene2 = this.$scrollmagic.scene({
-            triggerElement: '#figure',
-            triggerHook: 0.7,
-            duration: 500
-            }).setTween('.h1-bis', {  
-            css: { 
-                transform: 'scale(1)',
-                transition: 'transform .2s linear' ,
-            },
-        })
+    //     const scene2 = this.$scrollmagic.scene({
+    //         triggerElement: '#figure',
+    //         triggerHook: 0.7,
+    //         duration: 500
+    //         }).setTween('.h1-bis', {  
+    //         css: { 
+    //             transform: 'scale(1)',
+    //             transition: 'transform .2s linear' ,
+    //         },
+    //     })
 
-    this.$scrollmagic.addScene(scene2)
+    // this.$scrollmagic.addScene(scene2)
      }
 }
 </script>
@@ -53,7 +53,7 @@ $white: #FFF;
             right: 0;
             top: 32px;
             margin: 0;
-            transform: scale(0.2);
+            // transform: scale(0.2);
         }
         caption {
             width: 142px;
