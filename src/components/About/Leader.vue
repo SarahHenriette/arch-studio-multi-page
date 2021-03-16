@@ -54,7 +54,7 @@ $veryDarkBlue: #1B1D23;
             margin: 0;
             width: 100%;
             height: 320px;
-            transform: scale(0.2);
+            transform: scale(0.7);
             cursor: pointer;
             position: relative;
             transition: all .5s linear;
@@ -64,19 +64,22 @@ $veryDarkBlue: #1B1D23;
                 width: 100%;
                 height: 100%;
                 opacity: 0.5;
-                background-color: transparent;
-                display: none;
-                justify-content: center;
-                align-items: center;
+                background-color: transparent;                
                 transition: all .5s linear;
                 svg {
                     margin: 0 15px;
+                    display: none;
                 }
             }
             &:hover {
                 .opacity {
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
                     background-color: $veryDarkBlue;
+                    svg {
+                        display: block;
+                    }
                 }
             }
         }

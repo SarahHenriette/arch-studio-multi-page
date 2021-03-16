@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div class="navbar">
       <ul id="nav" > 
         <li v-if="$route.name !== 'Home'"><router-link to="/" class="logo-link"><Logo/></router-link> </li>
         <li v-else><Logo/></li>
@@ -63,6 +63,10 @@ export default {
 <style lang="scss" scoped>
 $veryLightGrey: #EEEFF4;
 $veryDarkBlue: #1B1D23;
+.navbar {
+    width: 1110px;
+    margin: auto;
+}
 
   #nav, #nav-mobile {
     display: flex;
@@ -79,7 +83,7 @@ $veryDarkBlue: #1B1D23;
   #nav {
     width: 507px;
     height: 40px;
-    margin: 56px 769px 56px 164px;
+    margin: 56px 0;
     padding-left: 0;
     .logo-link {
       line-height: 0;
@@ -127,12 +131,18 @@ $veryDarkBlue: #1B1D23;
     }
 
   @media screen and (max-width: 1200px){
+    .navbar {
+        width: 573px;
+    }
     #nav {
       width: 491px;
-      margin: 56px 180px 56px 97px;
+      margin: 56px 0;
     }
   }
   @media screen and (max-width: 600px){
+    .navbar {
+        width: 100%;
+    }
     #nav {
       display: none;
     }

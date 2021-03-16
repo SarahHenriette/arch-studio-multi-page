@@ -136,7 +136,7 @@ $veryDarkBlue: #1B1D23;
             margin: auto;
             margin-top: 200px;
             background-image: url('../../public/contact/desktop/image-map.png');
-            transform: scale(0.5);
+            transform: scale(0.9);
         }
 
         #connect-with-us {

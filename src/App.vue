@@ -54,7 +54,7 @@ body {
   $veryLightGrey: #EEEFF4;
   $red: #DF5656;
   $white: #FFF;
-
+  position: relative;
 
   h1, .h1-bis, h2, h3, p, a, input, textarea {
       font-family: $spartan;
@@ -182,31 +182,45 @@ body {
 }
 
 .page-name {
-  width: 25px;
-  height: 386px;
+  width: 450px;
+  height: 25px;
   position: absolute;
-  top: 0;
-  left: 64px;
+  top: 125px;
+  left: -147px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  transform: rotate(90deg);
   .line {
-    width: 1px;
-    height: 104px;
+    width: 140px;
+    height: 1px;
     background-color: $lightGrey;
+    margin-right: 48px;
   }
   p {
-    transform: rotate(90deg);
+    // transform: rotate(90deg);
     text-transform: uppercase;
     letter-spacing: 15px;
     font-size: 18px!important;
-    margin-top: 112px;
-    position: absolute;
-    bottom: 81px;
+    margin: 0;
+
   }
 }
   
+}
+
+@media screen and (max-width: 1110px){
+  #app {
+    .page-name {
+          left: -176px;
+    }
+  }
+}
+@media screen and (max-width: 600px){
+  #app {
+    .page-name {
+      display: none;
+    }
+  }
 }
 
 </style>

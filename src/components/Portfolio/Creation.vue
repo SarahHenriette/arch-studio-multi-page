@@ -32,6 +32,8 @@ $white: #FFF;
         position: relative;
         margin: 0;
         cursor: pointer;
+        transition: all .5s linear;
+
         .opacity {
             background-color: #000;
             position: absolute;
@@ -39,7 +41,16 @@ $white: #FFF;
             height: 100%;
             opacity: 0.2;
         }
+        .opacity2 {
+            background-color:transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            transition: all .5s linear;
+        }
         &:hover {
+            background-size: cover;
             .opacity2 {
                 background-color: #000;
                 position: absolute;
