@@ -126,7 +126,7 @@ $black: #000;
         }
       }
       .contain-image-welcome {
-        transform: translateX(-50px);
+        // transform: translateX(-50px);
         margin: 0;
         width: 350px;
         height: 568px;
@@ -172,7 +172,7 @@ $black: #000;
       background-image: url('./../../public/home/desktop/image-small-team.jpg');
       margin: 200px auto 0 auto;
       position: relative;
-       transform: scale(0.8);
+      //  transform: scale(0.8);
       .hover-small-team {
         width: 100%;
         height: 100%;
