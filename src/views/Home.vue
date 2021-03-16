@@ -11,13 +11,13 @@
       </article>
       <figure class="contain-image-welcome"></figure>
     </section>
-    <section id="small-team">
+    <div id="small-team">
       <div class="hover-small-team"></div>
       <article class="contain-text-small-team">
         <h2>Small team, big ideas</h2>
         <router-link to="/about" class="btn-1">About Us<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
       </article>
-    </section>
+    </div>
     <section id="featured">
       <header>
         <h2>Featured</h2>
