@@ -1,5 +1,5 @@
 <template>
-    <figure id="figure">
+    <figure class="figure">
         <div class="opacity"></div>
         <p class="h1-bis">{{  number }}</p>
         <caption>

@@ -23,11 +23,11 @@
         <h2>Featured</h2>
         <router-link to="/portfolio" class="btn-1">See All<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
       </header> 
-      <body class="contain-featured">
+      <div class="contain-featured">
         <Featured number="1" title="Project Del Sol" class="featured-project-del-sol"/>
         <Featured number="2" title="228B Tower" class="featured-tower"/>
         <Featured number="3" title="Le Prototype" class="featured-prototype"/>
-      </body>     
+      </div>     
         <router-link to="/portfolio" class="btn-1 btn-mobile">See All<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24"/></g></svg></router-link>
     </section>
   </div>
