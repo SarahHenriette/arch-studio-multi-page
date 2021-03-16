@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div class="page-name">
+        <div class="line"></div>
+        <p>{{$route.name}}</p>
+    </div>
     <Nav/>
     <transition name="fade" mode="out-in">
         <router-view/>
@@ -131,7 +135,6 @@ body {
 
 
 //buttons 
-
 .btn-1 {
     height: 72px;
     background-color: $veryDarkBlue;
@@ -172,17 +175,36 @@ body {
     align-items: center;
     font-family: $spartan;
     font-size: 15px;
-
-    // &:hover {
-    //     background-color: $veryLightGrey;
-    // }
-    // &:active {
-    //     background-color: $veryDarkBlue;
-    // }
 }
 .btn-3.active {
     background-color: $veryDarkBlue;
     color: $white;
+}
+
+.page-name {
+  width: 25px;
+  height: 386px;
+  position: absolute;
+  top: 0;
+  left: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .line {
+    width: 1px;
+    height: 104px;
+    background-color: $lightGrey;
+  }
+  p {
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 18px!important;
+    margin-top: 112px;
+    position: absolute;
+    bottom: 81px;
+  }
 }
   
 }

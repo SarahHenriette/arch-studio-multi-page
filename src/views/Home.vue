@@ -314,16 +314,4 @@ $black: #000;
     }
   }
 
-
-  @media screen and (max-width: 1110px) {
-    .home {
-
-    }
-  }
-
-  @media screen and (max-width: 750px) {
-    .home {
-
-    }
-  }
 </style>

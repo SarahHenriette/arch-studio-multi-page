@@ -1,6 +1,7 @@
 <template>
     <figure id="figure">
         <div class="opacity"></div>
+        <div class="opacity2"></div>
         <caption>
             <p class="title">{{ name }}</p>
             <p>{{ date }}</p>
@@ -30,12 +31,22 @@ $white: #FFF;
         height: 560px;
         position: relative;
         margin: 0;
+        cursor: pointer;
         .opacity {
             background-color: #000;
             position: absolute;
             width: 100%;
             height: 100%;
             opacity: 0.2;
+        }
+        &:hover {
+            .opacity2 {
+                background-color: #000;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+            }
         }
         caption {
             width: 203px;
